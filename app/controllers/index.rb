@@ -15,7 +15,7 @@ post "/learn" do
 
 		request = Net::HTTP::Get.new(url)
 		request["cache-control"] = 'no-cache'
-		request["postman-token"] = '7c05e845-d147-d76c-bc3d-97581694a023'
+		request["postman-token"] = ENV["HIDE"]
 
 		response = http.request(request)
 		puts response.read_body
